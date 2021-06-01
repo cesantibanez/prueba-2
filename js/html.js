@@ -1,14 +1,14 @@
       function fn_ocultarEtiquetas()
       {
-        document.getElementById('lbl_nombre').style.visibility ="hidden";
-        document.getElementById('lbl_direccion').style.visibility ="hidden";
+        document.getElementById('lbl_usuario').style.visibility ="hidden";
+        document.getElementById('lbl_contrasena').style.visibility ="hidden";
 
       }
 
       function fn_mostrarEtiquetas()
       {
-          var usuario = document.getElementById('txt_nombre').value;
-          var contrasena = document.getElementById("txt_direccion").value;
+          var usuario = document.getElementById('txt_usuario').value;
+          var contrasena = document.getElementById("txt_contrasena").value;
 
           if(usuario == "")
           {
@@ -25,15 +25,15 @@
 
           if(contrasena == "")
           {
-            document.getElementById('txt_contrasena').style.visibility ="visible";
-            document.getElementById('txt_direccion').classList.add('is-invalid');
+            document.getElementById('lbl_contrasena').style.visibility ="visible";
+            document.getElementById('txt_contrasena').classList.add('is-invalid');
 
           }
           else
           {
             document.getElementById('lbl_contrasena').style.visibility ="hidden";
             document.getElementById('txt_contrasena').classList.remove('is-invalid');
-            document.getElementById('lbl_contrasena').classList.add('is-valid');
+            document.getElementById('txt_contrasena').classList.add('is-valid');
 
 
           }
